@@ -80,6 +80,8 @@ const Form = () => {
   </form>
 }
 
+//El list es el componente que trae la lista de elementos del todoList y los pinta a trabes 
+//de un .map
 
 const List = () => {
   const { dispatch, state: { todo } } = useContext(Store);
@@ -153,6 +155,9 @@ const List = () => {
 }
 
 
+
+//El reducer es una funcion pura que es la unica que tiene acceso a modificar el estado
+//de la aplicacion y lo hace sin la necesidad de mutar el estado.
 
 function reducer(state, action) {
   switch (action.type) {
